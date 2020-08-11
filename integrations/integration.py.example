@@ -1,0 +1,54 @@
+import os
+script_path = os.path.abspath(os.path.join(os.path.dirname( __file__ ), "../.."))
+
+import sys
+sys.path.append(os.path.join(script_path, "lib"))
+sys.path.append(os.path.join(script_path, "bin/integrations"))
+
+import configparser
+
+# './integration_config.txt' can be used to store configuration parameters for your
+# integration.  The example below sets two variables based on the parameters in the
+# configuration file for the example integration named 'YOUR_INTEGRATION_NAME'.
+
+config = configparser.ConfigParser()
+config.read_file(os.path.join(script_path, "bin/integrations/integration_config.txt"))
+param_1 = config.get('YOUR_INTEGRATION_NAME', 'YOUR_PARAMETER_1').strip('"')
+param_2 = config.get('YOUR_INTEGRATION_NAME', 'YOUR_PARAMETER_2').strip('"')
+
+
+def get_data(ticket_info, logger):
+    """ This fucntion accepts the SecureChange access request and will return a string which
+    will be added to the SecureChange ticket as a comment.  If an error occurs, return None
+    and log the error via the logger.
+
+    :param ticket_info: SecureChange ticket information
+    :type ticket_info: dict
+    :param logger: Tufin logger
+    :type logger: pytos.common.logging.logger
+    :return: Comment to be added to SecureChange ticket, or None on error
+    :rtype: str | None
+    """
+
+
+    # This string will be returned and added as a comment to the SecureChange ticket
+    return_str = ""
+
+    # Log integration starting
+    logger.info("Running '{}' integration".format(__name__))
+
+    try:
+
+        ### YOUR CODE HERE ###
+
+    except Exception as e:
+
+        # Log the error and return an empty string
+        logger.error("Error: {}".format(e))
+        return None
+
+    # Log integration completing
+    logger.info("{} integration completed".format(__name__))
+
+    # Return comment
+    return return_str
