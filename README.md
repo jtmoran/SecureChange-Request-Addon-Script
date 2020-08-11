@@ -2,7 +2,7 @@
 
 The SecureChange Ticket Enrichment Script can be used to enrich sources, destinations, and ports from Tufin SecureChange Firewall Change Request and Server Decommission tickets.  This extensible script passes ticket information in JSON format to one or more integration scripts, which can be used to enrich the ticket information using any third-party solution.  The enriched information is then returned as a formatted string, which is added as a comment to the SecureChange ticket.
 
-![Infoblox Example](https://raw.githubusercontent.com/jtmoran/SecureChange-Ticket-Enrichment/master/screenshots/Example%20Results.PNG?raw=true)
+![Infoblox Example](https://raw.githubusercontent.com/jtmoran/SecureChange-Ticket-Enrichment/master/Screenshots/Example%20Results.PNG?raw=true)
 
 ## Script Setup
 
@@ -50,7 +50,7 @@ To configure SecureChange to utilize the Ticket Enrichment script, navigate to *
 
 Once completed, your configuration should be as shown below:
 
-![SecureChange Setup](https://raw.githubusercontent.com/jtmoran/SecureChange-Ticket-Enrichment/master/screenshots/SecureChange%20Setup.PNG?raw=true)
+![SecureChange Setup](https://raw.githubusercontent.com/jtmoran/SecureChange-Ticket-Enrichment/master/Screenshots/SecureChange%20Setup.PNG?raw=true)
 
 ## Troubleshooting
 
