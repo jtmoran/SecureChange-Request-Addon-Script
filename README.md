@@ -27,6 +27,10 @@ The SecureChange Ticket Enrichment script will run all `*.py` integration files 
 
 Integrations provided as packages can be installed by running the installer and providing your SecureChange Ticket Enrichment installation root directory.
 
+#### Developing Integrations
+
+Information on developing your own custom integrations can be found [here](https://github.com/jtmoran/SecureChange-Ticket-Enrichment/blob/master/Developing%20Integrations.md)
+
 ## SecureChange Setup
 
 To configure SecureChange to utilize the Ticket Enrichment script, navigate to **Settings** > **SecureChange API** and follow these steps:
