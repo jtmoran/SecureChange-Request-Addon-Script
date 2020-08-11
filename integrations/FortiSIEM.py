@@ -1,3 +1,10 @@
+import os
+script_path = os.path.abspath(os.path.join(os.path.dirname( __file__ ), "../.."))
+
+import sys
+sys.path.append(os.path.join(script_path, "lib"))
+sys.path.append(os.path.join(script_path, "bin/integrations"))
+
 import json
 import time
 import configparser
@@ -11,7 +18,7 @@ from datetime import datetime
 requests.packages.urllib3.disable_warnings()
 
 config = configparser.ConfigParser()
-config.read_file(open(r'/usr/local/ticket_enrichment/bin/integrations/integration_config.txt'))
+config.read_file(os.path.join(script_path, "bin/integrations/integration_config.txt"))
 FS_HOST = config.get('FortiSIEM', 'FS_HOST').strip('"')
 FS_USER = config.get('FortiSIEM', 'FS_USER').strip('"')
 FS_PASS = config.get('FortiSIEM', 'FS_PASS').strip('"')
