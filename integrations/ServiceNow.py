@@ -1,10 +1,21 @@
+import os
+script_path = os.path.abspath(os.path.join(os.path.dirname( __file__ ), "../.."))
+
+import sys
+sys.path.append(os.path.join(script_path, "lib"))
+sys.path.append(os.path.join(script_path, "bin/integrations"))
+
 import configparser
 import requests
 
 requests.packages.urllib3.disable_warnings()
 
+# './integration_config.txt' can be used to store configuration parameters for your
+# integration.  The example below sets two variables based on the parameters in the
+# configuration file for the example integration named 'YOUR_INTEGRATION_NAME'.
+
 config = configparser.ConfigParser()
-config.read_file(open(r'/usr/local/ticket_enrichment/bin/integrations/integration_config.txt'))
+config.read_file(os.path.join(script_path, "bin/integrations/integration_config.txt"))
 SN_HOST = config.get('ServiceNow', 'SN_HOST').strip('"')
 SN_USER = config.get('ServiceNow', 'SN_USER').strip('"')
 SN_PASS = config.get('ServiceNow', 'SN_PASS').strip('"')
@@ -39,6 +50,11 @@ def ci_query (ip, logger):
         # If query was successful
         if res.status_code == 200:
             # Results were found
+            try:
+                res.json()
+            except:
+                logger.error("Invalid response recieved from ServiceNow: {}".format(res.text))
+                return None
             if len(res.json()["result"]) > 0:
                 # For each result
                 for result in res.json()["result"]:
