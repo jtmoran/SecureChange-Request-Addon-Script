@@ -60,5 +60,3 @@ SecureChange error messages can be found by navigating to **Settings** > **Messa
 
 Contact Tufin support at <support@tufin.com> or through the [Tufin Portal](https://portal.tufin.com/).
 
-## License
-©2020 [Tufin Software North America, Inc.](https://www.tufin.com)
