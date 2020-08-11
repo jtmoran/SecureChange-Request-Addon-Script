@@ -17,44 +17,44 @@ The core script will pass two objects to the `get_data` function of the integrat
 - logger [logging] - Logging object to write entries to the log file
 
 `ticket_info` structure:
-```json
-{
-    'Id': int (Ticket ID), 
-    'Subject': str (Ticket subject), 
-    'WorkflowName': str (Name of ticket workflow), 
-    'Requester': str (Full name of tickter requester), 
-    'RequesterId': int (System ID of ticket requetser), 
-    'Status': str (Current status of ticket), 
-    'Comments': str (Ticket comments), 
-    'Requests': [
-        {
-            'Sources': [
-                {
-                    'Ip': str (IPv4 address.  Ex: 192.168.1.1),
-                    'Mask': str (Subnet mask.  Ex: 255.255.255.255), 
-                    'Cidr': str (CIDR notation.  Ex: 32), 
-                    'Private': bool (Is the IP address private?)
-                }
-            ], 
-            'Destinations': [
-                {
-                    'Ip': str (IPv4 address.  Ex: 192.168.1.1),
-                    'Mask': str (Subnet mask.  Ex: 255.255.255.255), 
-                    'Cidr': str (CIDR notation.  Ex: 32), 
-                    'Private': bool (Is the IP address private?)
-                }
-            ], 
-            'Services': [
-                {
-                    'Protocol': str (TCP or UDP), 
-                    'Min': str (Lowest port in range), 
-                    'Max': str (Highest port in range)
-                }
-            ]
-        }
-    ]
-}
-```
+
+    {
+        'Id': int (Ticket ID), 
+        'Subject': str (Ticket subject), 
+        'WorkflowName': str (Name of ticket workflow), 
+        'Requester': str (Full name of tickter requester), 
+        'RequesterId': int (System ID of ticket requetser), 
+        'Status': str (Current status of ticket), 
+        'Comments': str (Ticket comments), 
+        'Requests': [
+            {
+                'Sources': [
+                    {
+                        'Ip': str (IPv4 address.  Ex: 192.168.1.1),
+                        'Mask': str (Subnet mask.  Ex: 255.255.255.255), 
+                        'Cidr': str (CIDR notation.  Ex: 32), 
+                        'Private': bool (Is the IP address private?)
+                    }
+                ], 
+                'Destinations': [
+                    {
+                        'Ip': str (IPv4 address.  Ex: 192.168.1.1),
+                        'Mask': str (Subnet mask.  Ex: 255.255.255.255), 
+                        'Cidr': str (CIDR notation.  Ex: 32), 
+                        'Private': bool (Is the IP address private?)
+                    }
+                ], 
+                'Services': [
+                    {
+                        'Protocol': str (TCP or UDP), 
+                        'Min': str (Lowest port in range), 
+                        'Max': str (Highest port in range)
+                    }
+                ]
+            }
+        ]
+    }
+
 #### Logging
 Logging to the main log file can be accomplished utilizing the logger object which is passed to the `get_data` function of the integration script when the script is called.  For example:
 
