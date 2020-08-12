@@ -15,7 +15,6 @@ requests.packages.urllib3.disable_warnings()
 # configuration file for the example integration named 'YOUR_INTEGRATION_NAME'.
 
 config = configparser.ConfigParser()
-print(os.path.join(script_path, "bin/integrations/integration_config.txt"))
 config.read(os.path.join(script_path, "bin/integrations/integration_config.txt"))
 IB_HOST = config.get('Infoblox', 'IB_HOST').strip('"')
 IB_USER = config.get('Infoblox', 'IB_USER').strip('"')
