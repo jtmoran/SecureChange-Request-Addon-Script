@@ -1,3 +1,19 @@
+'''
+The following configuration parameters should be added to ./bin/integrations/integration_config.txt:
+
+[FortiSIEM]
+# IP or FQDN for FortiSIEM
+FS_HOST = ""
+# FortiSIEM user name
+FS_USER = ""
+# FortiSIEM password
+FS_PASS = ""
+# Number of days to query FortiSIEM logs (default: 14)
+QUERY_DAYS = "14"
+# Query timeout in seconds (default: 60)
+QUERY_TIMEOUT = "60"
+'''
+
 import os
 script_path = os.path.abspath(os.path.join(os.path.dirname( __file__ ), "../.."))
 
