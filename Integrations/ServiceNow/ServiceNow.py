@@ -15,7 +15,7 @@ requests.packages.urllib3.disable_warnings()
 # configuration file for the example integration named 'YOUR_INTEGRATION_NAME'.
 
 config = configparser.ConfigParser()
-config.read_file(os.path.join(script_path, "bin/integrations/integration_config.txt"))
+config.read(os.path.join(script_path, "bin/integrations/integration_config.txt"))
 SN_HOST = config.get('ServiceNow', 'SN_HOST').strip('"')
 SN_USER = config.get('ServiceNow', 'SN_USER').strip('"')
 SN_PASS = config.get('ServiceNow', 'SN_PASS').strip('"')
