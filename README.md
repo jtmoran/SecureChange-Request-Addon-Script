@@ -46,6 +46,24 @@ The SecureChange Ticket Enrichment script will run all `*.py` integration files 
 
 **Note**: Only files intended to be directly executed by the SecureChange Ticket Enrichment script should be placed in the `./bin/integrations` directory. Any dependencies should be installed in `./lib` and referenced from that directory.  
 
+#### Integration Configuration
+
+Each integration should specify the required configuration parameters as a comment at the beginning of the integration script.  For example:
+
+    ''''
+    The following configuration parameters should be added to ./bin/integrations/integration_config.txt:
+
+    [ServiceNow]
+    # ServiceNow IP or FQDN
+    SN_HOST = ""
+    # ServiceNow user name
+    SN_USER = ""
+    # ServiceNow password
+    SN_PASS = ""
+    ''''
+
+Add the specified configuration parameters and their appropriate values to `./bin/integrations/integration_config.txt` to configure the integration for use.
+
 #### Developing Integrations
 
 Information on developing your own custom integrations can be found [here](https://github.com/jtmoran/SecureChange-Ticket-Enrichment/blob/master/Developing%20Integrations.md)
