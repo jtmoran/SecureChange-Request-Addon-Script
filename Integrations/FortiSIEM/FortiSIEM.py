@@ -18,7 +18,7 @@ from datetime import datetime
 requests.packages.urllib3.disable_warnings()
 
 config = configparser.ConfigParser()
-config.read_file(os.path.join(script_path, "bin/integrations/integration_config.txt"))
+config.read(os.path.join(script_path, "bin/integrations/integration_config.txt"))
 FS_HOST = config.get('FortiSIEM', 'FS_HOST').strip('"')
 FS_USER = config.get('FortiSIEM', 'FS_USER').strip('"')
 FS_PASS = config.get('FortiSIEM', 'FS_PASS').strip('"')
