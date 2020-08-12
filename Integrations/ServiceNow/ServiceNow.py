@@ -1,3 +1,15 @@
+''''
+The following configuration parameters should be added to ./bin/integrations/integration_config.txt:
+
+[ServiceNow]
+# ServiceNow IP or FQDN
+SN_HOST = ""
+# ServiceNow user name
+SN_USER = ""
+# ServiceNow password
+SN_PASS = ""
+''''
+
 import os
 script_path = os.path.abspath(os.path.join(os.path.dirname( __file__ ), "../.."))
 
