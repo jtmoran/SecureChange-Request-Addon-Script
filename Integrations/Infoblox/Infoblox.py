@@ -1,3 +1,17 @@
+''''
+The following configuration parameters should be added to ./bin/integrations/integration_config.txt:
+
+[Infoblox]
+# Infoblox IP or FQDN
+IB_HOST = ""
+# Infoblox user name
+IB_USER = ""
+# Infoblox password
+IB_PASS = ""
+# Infoblox API version number, for example: 2.7
+IB_APIV = ""
+''''
+
 import os
 script_path = os.path.abspath(os.path.join(os.path.dirname( __file__ ), "../.."))
 
