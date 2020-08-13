@@ -1,6 +1,6 @@
 # SecureChange Ticket Enrichment Script
 
-The SecureChange Ticket Enrichment script can be downloaded [here]().
+The SecureChange Ticket Enrichment script can be downloaded [here](https://www.dropbox.com/s/jfefdl9n70g4h72/securechange_ticket_enrichment.run?dl=1).
 
 The SecureChange Ticket Enrichment script can be used to enrich source IPs, destination IPs, and ports from Tufin SecureChange Firewall Change Request and Server Decommission tickets.  This extensible script passes ticket information in JSON format to one or more integration scripts, which can be used to enrich the ticket information using any third-party solution.  The enriched information is then returned as a formatted string, which is added as a comment to the SecureChange ticket.
 
@@ -10,7 +10,7 @@ The SecureChange Ticket Enrichment script can be used to enrich source IPs, dest
 
 To install the SecureChange Ticket Enrichment script:
 
-1. Download the installer [here]()
+1. Download the installer [here](https://www.dropbox.com/s/jfefdl9n70g4h72/securechange_ticket_enrichment.run?dl=1)
 2. Run the following commands:
 
     `chmod +x securechange_ticket_enrichment.run`
