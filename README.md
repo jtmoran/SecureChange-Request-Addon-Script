@@ -28,9 +28,13 @@ To install the SecureChange Ticket Enrichment script:
 #### Set SecureChange Credentials
 SecureChange credentials can be securely stored using the `set_secure_store.py` script in the `bin` directory.  Use the following command to store your credentials:
 
-`<install_dir>/python/bin/python3 <install_dir>/bin/set_secure_store.py -o securechange`
+`<install_dir>/python/bin/python3 <install_dir>/bin/set_secure_store.py -s securechange`
 
-Enter your SecureChange user name and password.  The credentials can be changed at any time by running the same command.
+Enter your SecureChange user name and password.  
+
+The credentials can be changed at any time by running the  command:
+
+`<install_dir>/python/bin/python3 <install_dir>/bin/set_secure_store.py -o securechange`
 
 #### Script Settings
 
