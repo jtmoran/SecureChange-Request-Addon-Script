@@ -17,11 +17,12 @@ To install the SecureChange Ticket Enrichment script:
     
     `./securechange_ticket_enrichment.run --target <installation_directory>/securechange_ticket_enrichment`
     
-    `chown -R apache /usr/local/securechange_ticket_enrichment`
+    `chown -R apache <installation_directory>/securechange_ticket_enrichment`
     
-    `chgrp -R tomcat /usr/local/securechange_ticket_enrichment`
+    `chgrp -R tomcat <installation_directory>/securechange_ticket_enrichment`
 
-3. Setup the script and integrations as detailed in the following section
+3. Use the text editor of your choice to edit `<installation_directory>/bin/ticket_enrichment.py` and change the first line to the path to Python in your installation directory
+4. Setup the script and integrations as detailed in the following section
 
 ## Script Setup
 
