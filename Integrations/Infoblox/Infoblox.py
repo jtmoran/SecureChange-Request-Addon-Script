@@ -53,7 +53,7 @@ def search_ip(ip, logger):
             for item in res.json():
                 if "status" in item:
                     result = "{}\n        Status: {}".format(result, item["status"])
-                if "names" in item:
+                if "types" in item:
                     if len(item["types"]) > 0:
                         result = "{}\n        Types: {}".format(result, ", ".join(item["types"]))
                 if "lease_state" in item:
