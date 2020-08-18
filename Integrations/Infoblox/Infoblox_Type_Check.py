@@ -1,7 +1,7 @@
 
 ''''
 The following configuration parameters should be added to ./bin/integrations/integration_config.txt:
-[Infoblox]
+[Infoblox_Type_Check]
 # Infoblox IP or FQDN
 IB_HOST = ""
 # Infoblox user name
