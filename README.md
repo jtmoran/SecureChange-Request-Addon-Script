@@ -16,24 +16,13 @@ To install the SecureChange Ticket Enrichment script:
     `chmod +x securechange_ticket_enrichment.run`
     
     `./securechange_ticket_enrichment.run --target <installation_directory>/securechange_ticket_enrichment`
-    
-    `chown -R apache <installation_directory>/securechange_ticket_enrichment`
-    
-    `chgrp -R tomcat <installation_directory>/securechange_ticket_enrichment`
 
-3. Use the text editor of your choice to edit `<installation_directory>/bin/ticket_enrichment.py` and change the first line to the path to Python in your installation directory
-4. Setup the script and integrations as detailed in the following section
+The default configuration should suffice for most installations.  If you need to modify the configuration, or change the SecureChange credentials you provided during installation, please read the Configuration section.  Otherwise, you may skip to the Integration Setup section.
 
-## Script Setup
+## Configuration
 
-#### Set SecureChange Credentials
-SecureChange credentials can be securely stored using the `set_secure_store.py` script in the `bin` directory.  Use the following command to store your credentials:
-
-`<install_dir>/python/bin/python3 <install_dir>/bin/set_secure_store.py -s securechange`
-
-Enter your SecureChange user name and password.  
-
-The credentials can be changed at any time by running the  command:
+#### Setting SecureChange Credentials
+During  installation, you will be prompted to enter your SecureChange credentials.  The credentials can be changed at any time by running the command:
 
 `<install_dir>/python/bin/python3 <install_dir>/bin/set_secure_store.py -o securechange`
 
@@ -41,15 +30,15 @@ The credentials can be changed at any time by running the  command:
 
 Script settings, such as the log location, log level, and SecureChange host are stored in `<install_dir>/conf/settings.conf`.  The default settings should be sufficient for most installations.
 
-**Remeber**, this script should only be run from the SecureChange server, so the SecureChange host should remain `127.0.0.1`.  Please contact Tufin before attempting to utilize this script from another location.
+**IMPORTANT**, this script should only be run from the SecureChange server, so the SecureChange host should remain `127.0.0.1`.  Please contact Tufin before attempting to utilize this script from another location.
 
 ## Integration Setup
 
 #### Installing Integrations
 
-The SecureChange Ticket Enrichment script will run all `*.py` integration files located in `./bin/integrations` on each execution.  To install a new integration manually, simply place the integration file in this directory.  
+The SecureChange Ticket Enrichment script will run all `*.py` integration files located in `./bin/integrations`.  To install a new integration manually, simply place the integration file in this directory.  
 
-**Note**: Only files intended to be directly executed by the SecureChange Ticket Enrichment script should be placed in the `./bin/integrations` directory. Any dependencies should be installed in `./lib` and referenced from that directory.  
+**IMPORTANT**: Only files intended to be directly executed by the SecureChange Ticket Enrichment script should be placed in the `./bin/integrations` directory. Any dependencies should be installed in `./lib` and referenced from that directory.  
 
 #### Integration Configuration
 
