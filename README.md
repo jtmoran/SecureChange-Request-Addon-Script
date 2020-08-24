@@ -34,15 +34,40 @@ Script settings, such as the log location, log level, and SecureChange host are 
 
 ## Integration Setup
 
-#### Installing Integrations
-
-The SecureChange Ticket Enrichment script will run all `*.py` integration files located in `./bin/integrations`.  To install a new integration manually, simply place the integration file in this directory.  
-
 **IMPORTANT**: Only files intended to be directly executed by the SecureChange Ticket Enrichment script should be placed in the `./bin/integrations` directory. Any dependencies should be installed in `./lib` and referenced from that directory.  
+
+#### Installing Integrations with Installers
+
+Many integrations are packaged as `.run` files, which will install the integration and add the appropriate lines to the configuration file automatically.
+
+To install a new integration with an installer, download the `.run` file and execute the file with the `--target` parameter specifying the root directory of your SecureChange Ticket Enrichment script installation.  For example `./FortiSIEM.run --target /usr/local/securechange_ticket_enrichment`.
+
+If the integration fails, or no integration installer is available, you may install the integration manually as described in the next section.
+
+Once the installation has completed, you must configuration the integration by setting the configuration parameters in `./bin/integrations/integration_config.txt`.  For more information on configuration, see the Integration Configuration section below.
+
+#### Installing Integrations Manually
+
+Integrations without a `.run` installer will be in the form of raw Python code and will need to be installed manually.  
+
+The SecureChange Ticket Enrichment script will run all `*.py` integration files located in `./bin/integrations`.  To install a new integration manually, download the `.py` file and place the integration file in this directory.  
+
+Once the script has been installed, you must configuration the integration by setting the configuration parameters in `./bin/integrations/integration_config.txt`.  You will need to add the appropriate lines to the configuration file manually, as described in the next section.
 
 #### Integration Configuration
 
-Each integration should specify the required configuration parameters as a comment at the beginning of the integration script.  For example:
+Each integration receives its configuration parameters from the file `./bin/integrations/integration_config.txt`.  These configuration parameters may include an IP or FQDN, credentials, and other settings.  The configuration file follows the format:
+
+    [IntegrationName]
+    PARAM1 = ""
+    PARAM2 = ""
+    ....
+
+It is important that the integration name and parameters match the documentation exactly.
+
+When a `.run` installer is used to install an integration, the appropriate configuration lines will be automatically added to the configuration file.  Completing the setup process requires that you set the parameters for your installation in the file `./bin/integrations/integration_config.txt`.
+
+If a `.run` installer is not used and the integration is installed manually, the configuration lines will also need to be added to the configuration file manually.  The beginning of the integration script should specify the required configuration lines as a comment at the beginning of the integration script.  For example:
 
     ''''
     The following configuration parameters should be added to ./bin/integrations/integration_config.txt:
@@ -56,7 +81,7 @@ Each integration should specify the required configuration parameters as a comme
     SN_PASS = ""
     ''''
 
-Add the specified configuration parameters and their appropriate values to `./bin/integrations/integration_config.txt` to configure the integration for use.
+Add the specified configuration lines and their appropriate values to `./bin/integrations/integration_config.txt` to configure the integration for use.
 
 #### Developing Integrations
 
