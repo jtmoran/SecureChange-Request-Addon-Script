@@ -1,15 +1,15 @@
 # Developing Integrations
-The SecureChange Ticket Enrichment script can be easily extended by creating additional integration scripts using Python.  This document provides details on developing new integration files to be utilized with the core script.
+The SecureChange Request Add-on script can be easily extended by creating additional integration scripts using Python.  This document provides details on developing new integration files to be utilized with the core script.
 
-An integration file template can be found [here](https://raw.githubusercontent.com/jtmoran/SecureChange-Ticket-Enrichment/master/Integrations/integration.py.example).  This can be used as a framework for developing your own integrations.
+An integration file template can be found [here](https://raw.githubusercontent.com/jtmoran/SecureChange-Request-Addon-Script/master/Integrations/integration.py.example).  This can be used as a framework for developing your own integrations.
 
-Previously published integrations can be found [here](https://github.com/jtmoran/SecureChange-Ticket-Enrichment/tree/master/Integrations).  Exploring these previously published integrations can be helpful in getting started with your own.
+Previously published integrations can be found [here](https://github.com/jtmoran/SecureChange-Request-Addon-Script/tree/master/Integrations).  Exploring these previously published integrations can be helpful in getting started with your own.
 
 ## Overview
 
-When the SecureChange Ticket Enrichment script (**core script**) is executed by SecureChange, ticket information will be gathered to be passed to the integration file(s).  The core script will then iterate through the directory `./bin/integrations` looking for any `*.py` files, which are the **integration scripts**.  For each integration script, the core script will call the `get_data` function of the integration script and pass the ticket information as a dict object (along with the logger) to the function.  The `get_data` function may perform any action, including calling other functions or scripts, in order to enrich the ticket information.  Finally, the `get_data` function should return a formatted string with the enrichment information, which will be added to the SecureChange ticket as a comment.
+When the SecureChange Request Add-on script (**core script**) is executed by SecureChange, ticket information will be gathered to be passed to the integration file(s).  The core script will then iterate through the directory `./bin/integrations` looking for any `*.py` files, which are the **integration scripts**.  For each integration script, the core script will call the `get_data` function of the integration script and pass the ticket information as a dict object (along with the logger) to the function.  The `get_data` function may perform any action, including calling other functions or scripts, in order to enrich the ticket information.  Finally, the `get_data` function should return a formatted string with the information to be added to the SecureChange ticket as a comment.
 
-**Note**: Only files intended to be directly executed by the SecureChange Ticket Enrichment script should be placed in the `./bin/integrations` directory. Any dependencies should be installed in `./lib` and referenced from that directory.  
+**Note**: Only files intended to be directly executed by the SecureChange Request Add-on script should be placed in the `./bin/integrations` directory. Any dependencies should be installed in `./lib` and referenced from that directory.  
 
 #### Input
 The core script will pass two objects to the `get_data` function of the integration script:
