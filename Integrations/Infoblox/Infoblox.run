@@ -2,7 +2,7 @@
 
 # Basic integration information
 NAME="InfoBlox"
-FNAME="InfoBlox"
+FNAME="InfoBlox.py"
 VER="1.1"
 
 # ************************************ BEGIN INTEGRATION PARAMETERS ************************************ 
