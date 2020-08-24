@@ -1,6 +1,6 @@
 # SecureChange Request Add-on Script
 
-The SecureChange Request Add-on script can be downloaded [here](https://www.dropbox.com/s/o8lpmsmrudxvkih/securechange_request_addon_script.run?dl=1).
+The SecureChange Request Add-on script can be downloaded [here](https://www.dropbox.com/s/71jb3zbrns7zdhs/securechange_request_addon_script.run?dl=1).
 
 The SecureChange Request Add-on script can be used to enrich or take action based on source IPs, destination IPs, and ports from Tufin SecureChange Firewall Change Request and Server Decommission tickets.  This extensible script passes ticket information in JSON format to one or more integration scripts, which can be used to enrich the ticket information using any third-party solution.  The enriched information is then returned as a formatted string, which is added as a comment to the SecureChange ticket.
 
@@ -12,7 +12,7 @@ The SecureChange Request Add-on script can be used to enrich or take action base
 
 To install the SecureChange Request Add-on script:
 
-1. Download the installer [here](https://www.dropbox.com/s/o8lpmsmrudxvkih/securechange_request_addon_script.run?dl=1)
+1. Download the installer [here](https://www.dropbox.com/s/71jb3zbrns7zdhs/securechange_request_addon_script.run?dl=1)
 2. Run the following commands:
 
     `chmod +x securechange_request_addon_script.run`
