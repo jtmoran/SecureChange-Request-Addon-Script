@@ -2,25 +2,3 @@
 [YOUR_INTEGRATION_NAME]
 YOUR_PARAMETER_1 = "YOUR VALUE 1"
 YOUR_PARAMETER_2 = "YOUR VALUE 2"
-
-# FortiSIEM Configuration
-[FortiSIEM]
-FS_HOST = ""
-FS_USER = ""
-FS_PASS = ""
-QUERY_DAYS = ""
-QUERY_TIMEOUT = ""
-
-# ServiceNow configuration
-[ServiceNow]
-SN_HOST = ""
-SN_USER = ""
-SN_PASS = ""
-
-# Infoblox configuration
-[Infoblox]
-IB_HOST = ""
-IB_USER = ""
-IB_PASS = ""
-# API version number.  For example, 2.7
-IB_APIV = ""
