@@ -193,9 +193,9 @@ def get_data(ticket_info, logger):
                                 df = pd.read_csv(data, sep=",")
                                 table = tabulate(df, showindex=False, headers=df.columns, tablefmt="simple")
                                 table = "    ".join(table.splitlines(1))
-                                return_str = "{}\n\nSplunk query '{}' results for {}:\n\n    {}".format(return_str, q["name"], src["Ip"], table)
+                                return_str = "{}\n\nSplunk query '{}' results for {} for the past {} days:\n\n    {}".format(return_str, q["name"], src["Ip"], table, SP_DAYS)
                             else:
-                                return_str = "{}\n\nSplunk query '{}' results for {}:\n\n    No results found".format(return_str, q["name"], src["Ip"])
+                                return_str = "{}\n\nSplunk query '{}' results for {} for the past {} days:\n\n    No results found".format(return_str, q["name"], src["Ip"], SP_DAYS)
 
             for dst in req['Destinations']:
                 if dst['Cidr'] == '32':
@@ -221,9 +221,9 @@ def get_data(ticket_info, logger):
                                 df = pd.read_csv(data, sep=",")
                                 table = tabulate(df, showindex=False, headers=df.columns, tablefmt="simple")
                                 table = "    ".join(table.splitlines(1))
-                                return_str = "{}\n\nSplunk query '{}' results for {}:\n\n    {}".format(return_str, q["name"], dst["Ip"], table)
+                                return_str = "{}\n\nSplunk query '{}' results for {} for the past {} days:\n\n    {}".format(return_str, q["name"], dst["Ip"], table, SP_DAYS)
                             else:
-                                return_str = "{}\n\nSplunk query '{}' results for {}:\n\n    No results found".format(return_str, q["name"], dst["Ip"])
+                                return_str = "{}\n\nSplunk query '{}' results for {} for the past {} days:\n\n    No results found".format(return_str, q["name"], dst["Ip"], SP_DAYS)
 
 
     except Exception as e:
