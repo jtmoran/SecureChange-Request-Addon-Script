@@ -21,7 +21,8 @@ SP_PASS = ""
 # Number of days to query Splunk logs (Default: 14)
 SP_DAYS = "14"
 # JSON list of Splunk queries to run 
-# For example: [{"name": "<your_query_name>", "query", "<your_splunk_query>"}, {"name": "<your_query_name>", "query", "<your_splunk_query>"}]
+# For example: [{"name": "<your_query_name>", "query", "<your_splunk_query_with_#IP#>"}, {"name": "<your_query_name>", "query", "<your_splunk_query_with_#IP#>"}]
+# The variable "#IP#" in the Splunk query will be replaced with the IP address from the SecureChange request
 # Note: Double quotes in the query MUST be escaped with a backslash ' \" '
 SP_QUERY = []
 EOM
@@ -45,7 +46,8 @@ SP_PASS = ""
 # Number of days to query Splunk logs (Default: 14)
 SP_DAYS = "14"
 # JSON list of Splunk queries to run 
-# For example: [{"name": "<your_query_name>", "query", "<your_splunk_query>"}, {"name": "<your_query_name>", "query", "<your_splunk_query>"}]
+# For example: [{"name": "<your_query_name>", "query", "<your_splunk_query_with_#IP#>"}, {"name": "<your_query_name>", "query", "<your_splunk_query_with_#IP#>"}]
+# The variable "#IP#" in the Splunk query will be replaced with the IP address from the SecureChange request
 # Note: Double quotes in the query MUST be escaped with a backslash ' \" '
 SP_QUERY = []
 '''
