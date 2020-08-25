@@ -113,6 +113,3 @@ Once completed, your configuration should be as shown below:
 Logs for script and integration execution can be found in the `securechange_request_addon_script.log` file, stored in `/var/log` or the custom path set in `./conf/settings.conf`.
 
 SecureChange error messages can be found by navigating to **Settings** > **Message Board**.
-
-Contact Tufin support at <support@tufin.com> or through the [Tufin Portal](https://portal.tufin.com/).
-
