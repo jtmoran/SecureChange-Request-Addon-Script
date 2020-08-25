@@ -421,9 +421,9 @@ ${NAME} Installer
 Integration Version: ${VER}
 Options:
   --help                     Print this message
-  --target <dir> (Required)  Root installation directory of the ticket enrichment script
+  --target <dir> (Required)  Root installation directory of the request add-on script
 Example:
-  $0 --target /usr/local/securechange_ticket_enrichment
+  $0 --target /usr/local/securechange_request_addon
 EOH
 }
 
@@ -456,12 +456,12 @@ then
     exit 1
 fi
 
-# If the target directory is not the ticket enrichment script root directory, show help and exit
-if ! [[ -f "$target_dir/bin/ticket_enrichment.py" ]]
+# If the target directory is not the request add-on script root directory, show help and exit
+if ! [[ -f "$target_dir/bin/request_addon.py" ]]
 then
     echo
-    echo "ERROR: '$target_dir/bin/ticket_enrichment.py' not found!"
-    echo "Target directory must be the root of the ticket enrichment script directory"
+    echo "ERROR: '$target_dir/bin/request_addon.py' not found!"
+    echo "Target directory must be the root of the request add-on script directory"
     Print_Help
     exit 1
 fi
