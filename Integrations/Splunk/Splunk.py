@@ -1,3 +1,25 @@
+'''
+The following configuration parameters should be added to ./bin/integrations/integration_config.txt:
+[Splunk]
+# IP or FQDN for Splunk
+SP_HOST = ""
+# Splunk port (Default: 8089)
+SP_PORT = "8089"
+# HTTP protocol (Options: "http" or "https" (Default))
+SP_PROTO = "https"
+# Splunk user name
+SP_USER = ""
+# Splunk password
+SP_PASS = ""
+# Number of days to query Splunk logs (Default: 14)
+SP_DAYS = "14"
+# JSON list of Splunk queries to run 
+# For example: [{"name": "<your_query_name>", "query", "<your_splunk_query_with_#IP#>"}, {"name": "<your_query_name>", "query", "<your_splunk_query_with_#IP#>"}]
+# The variable "#IP#" in the Splunk query will be replaced with the IP address from the SecureChange request
+# Note: Double quotes in the query MUST be escaped with a backslash ' \" '
+SP_QUERY = []
+'''
+
 import os
 script_path = os.path.abspath(os.path.join(os.path.dirname( __file__ ), "../.."))
 
