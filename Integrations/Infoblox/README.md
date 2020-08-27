@@ -44,7 +44,20 @@ This integration queries Infoblox for any /32 IP addresses in the ticket and add
             - 'host_1' (10.0.0.112) DHCP: False
 
 ## Infoblox Type Check
-This integration queries Infoblox and examines the IP Type information returned.  If the IP Type matches any of the Types specified in the integration configuration (for example, DHCP), the ticket will be rejected with the comment specified in the integration configuration.
+This integration queries Infoblox and examines the IP Type information returned.  If the IP Type matches any of the types specified in the integration configuration (for example, DHCP), the ticket will be rejected with the comment specified in the integration configuration.
+
+If you are not sure of the values of the types you want to match, use the following API to query an IP address you know is of the correct type: `https://<infoblox_address>/wapi/v<api_version>/ipv4address?ip_address=<ip_to_query>`
+
+The types will be listed in the `types` list, as shown below:
+
+        ...
+        <types>
+            <list>
+                <value>HOST</value>
+                <value>RESERVED_RANGE</value>
+            </list>
+        </types>
+        ...
 
 **Installer:** Infoblox_Type_Check.run
 
