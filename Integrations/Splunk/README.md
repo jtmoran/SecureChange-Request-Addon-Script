@@ -79,3 +79,6 @@ It is a good idea to build and test your queries in the Splunk UI, then add them
         ------------------------------  -------
         SSH brute force login attempt         3
         Ping with TTL=100                     1
+
+### Versions
+- 08-26-2020 - Initial upload
