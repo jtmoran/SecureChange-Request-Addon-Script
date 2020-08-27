@@ -7,6 +7,15 @@ This integration queries Splunk using the queries specified in the integration c
 
 **Code:** Splunk.py
 
+### Requirements
+
+This integration requires the following Python libraries:
+
+- pandas
+- tabulate
+
+These libraries will be automatically installed when using the Splunk.run installer.  If the integration is installed manually, these libraries must also be installed manually using pip.
+
 ### Configuration
 
 **Header:** `[Splunk]`
