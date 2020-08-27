@@ -42,3 +42,6 @@ This integration queries FortiSIEM CMBD and events for any /32 IP addresses in t
             Host performance monitoring state: 601
 
         Retrieved: 08/24/2020 13:05:16
+
+### Versions
+- 08-12-2020 - Initial upload
