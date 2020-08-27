@@ -33,3 +33,6 @@ This integration queries ServiceNow CIs for any /32 IP addresses in the ticket a
         Short Desc: Fortinet FG300 Firewall
         Comments: Server room, third floow
         Link: https://example.service-now.com/nav_to.do?uri=%2Fcmdb_ci_appl.do%3Fsys_id%1234567890abcdef1234567890abcdef
+
+### Versions
+- 08-12-2020 - Initial upload
