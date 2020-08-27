@@ -43,6 +43,9 @@ This integration queries Infoblox for any /32 IP addresses in the ticket and add
             - 'host1' (10.0.0.112) DHCP: False
             - 'host_1' (10.0.0.112) DHCP: False
 
+### Versions
+- 08-18-2020 - Initial upload
+
 ## Infoblox Type Check
 This integration queries Infoblox and examines the IP Type information returned.  If the IP Type matches any of the types specified in the integration configuration (for example, DHCP), the ticket will be rejected with the comment specified in the integration configuration.
 
@@ -84,3 +87,6 @@ The types will be listed in the `types` list, as shown below:
         10.0.0.112 matches the address type 'DHCP' - Tickets cannot be submitted for dynamic (DHCP) addresses.  Please modify your request and resubmit
 
         10.0.0.120 matches the address type 'DHCP' - Tickets cannot be submitted for dynamic (DHCP) addresses.  Please modify your request and resubmit
+
+### Versions
+- 08-18-2020 - Initial upload
