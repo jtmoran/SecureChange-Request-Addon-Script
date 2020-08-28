@@ -116,3 +116,4 @@ SecureChange error messages can be found by navigating to **Settings** > **Messa
 
 ### Versions
 - 08-11-2020 - Initial upload
+- 08-28-2020 - Added support for 'ANY' service
