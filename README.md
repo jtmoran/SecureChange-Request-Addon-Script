@@ -113,3 +113,6 @@ Once completed, your configuration should be as shown below:
 Logs for script and integration execution can be found in the `securechange_request_addon_script.log` file, stored in `/var/log` or the custom path set in `./conf/settings.conf`.
 
 SecureChange error messages can be found by navigating to **Settings** > **Message Board**.
+
+### Versions
+- 08-11-2020 - Initial upload
