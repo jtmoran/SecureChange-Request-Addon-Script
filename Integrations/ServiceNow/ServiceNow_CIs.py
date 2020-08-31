@@ -1,7 +1,7 @@
 ''''
 The following configuration parameters should be added to ./bin/integrations/integration_config.txt:
 
-[ServiceNow]
+[ServiceNow_CIs]
 # ServiceNow IP or FQDN
 SN_HOST = ""
 # ServiceNow user name
@@ -28,9 +28,9 @@ requests.packages.urllib3.disable_warnings()
 
 config = configparser.ConfigParser()
 config.read(os.path.join(script_path, "bin/integrations/integration_config.txt"))
-SN_HOST = config.get('ServiceNow', 'SN_HOST').strip('"')
-SN_USER = config.get('ServiceNow', 'SN_USER').strip('"')
-SN_PASS = config.get('ServiceNow', 'SN_PASS').strip('"')
+SN_HOST = config.get('ServiceNow_CIs', 'SN_HOST').strip('"')
+SN_USER = config.get('ServiceNow_CIs', 'SN_USER').strip('"')
+SN_PASS = config.get('ServiceNow_CIs', 'SN_PASS').strip('"')
 
 def get_link(url):
     headers = {
