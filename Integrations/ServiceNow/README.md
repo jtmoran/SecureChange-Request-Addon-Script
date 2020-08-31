@@ -1,13 +1,13 @@
-## ServiceNow
+## ServiceNow CIs
 This integration queries ServiceNow CIs for any /32 IP addresses in the ticket and adds the CI information to the ticket comments.
 
-**Installer:** ServiceNow.run
+**Installer:** ServiceNow_CIs.run
 
-**Code:** ServiceNow.py
+**Code:** ServiceNow_CIs.py
 
 ### Configuration
 
-**Header:** `[ServiceNow]`
+**Header:** `[ServiceNow_CIs]`
 
 **Parameters**
 | Name | Type | Description | Example |
